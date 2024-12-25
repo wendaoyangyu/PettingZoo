@@ -24,9 +24,11 @@ To install the base PettingZoo library: `pip install pettingzoo`.
 
 This does not include dependencies for all families of environments (some environments can be problematic to install on certain systems).
 
-To install the dependencies for one family, use `pip install pettingzoo[atari]`, or use `pip install pettingzoo[all]` to install all dependencies.
+To install the dependencies for one family, use `pip install 'pettingzoo[atari]'`, or use `pip install 'pettingzoo[all]'` to install all dependencies.
 
 We support Python 3.8, 3.9, 3.10 and 3.11 on Linux and macOS. We will accept PRs related to Windows, but do not officially support it.
+
+Note: Some Linux distributions may require manual installation of `cmake`, `swig`, or `zlib1g-dev` (e.g., `sudo apt install cmake swig zlib1g-dev`)
 
 ## Getting started
 
@@ -71,11 +73,6 @@ SuperSuit is a library that includes all commonly used wrappers in RL (frame sta
 
 PettingZoo keeps strict versioning for reproducibility reasons. All environments end in a suffix like "\_v0".  When changes are made to environments that might impact learning results, the number is increased by one to prevent potential confusion.
 
-## Project Maintainers
-Project Manager: [Elliot Tower](https://github.com/elliottower/)
-
-Maintenance for this project is also contributed by the broader Farama team: [farama.org/team](https://farama.org/team).
-
 ## Citation
 
 To cite this project in publication, please use
@@ -90,3 +87,6 @@ To cite this project in publication, please use
   year={2021}
 }
 ```
+## Project Maintainers
+- Project Manager: [David Gerard](https://github.com/David-GERARD) - `david.gerard.23@ucl.ac.uk`.
+- Maintenance for this project is also contributed by the broader Farama team: [farama.org/team](https://farama.org/team).

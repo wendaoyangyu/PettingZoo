@@ -9,7 +9,7 @@ To install the base PettingZoo library: `pip install pettingzoo`.
 
 This does not include dependencies for all families of environments (some environments can be problematic to install on certain systems).
 
-To install the dependencies for one family, use `pip install pettingzoo[atari]`, or use `pip install pettingzoo[all]` to install all dependencies.
+To install the dependencies for one family, use `pip install 'pettingzoo[atari]'`, or use `pip install 'pettingzoo[all]'` to install all dependencies.
 
 We support Python 3.8, 3.9, 3.10 and 3.11 on Linux and macOS. We will accept PRs related to Windows, but do not officially support it.
 
@@ -148,5 +148,6 @@ In certain cases, separating agent from environment actions is helpful for study
 Environments are by default wrapped in a handful of lightweight wrappers that handle error messages and ensure reasonable behavior given incorrect usage (i.e. playing illegal moves or stepping before resetting). However, these add a very small amount of overhead. If you want to create an environment without them, you can do so by using the `raw_env()` constructor contained within each module:
 
 ``` python
-env = knights_archers_zombies_v10.raw_env(<environment parameters>)
+environment_parameters = {}  # any parameters to pass to the environment
+env = knights_archers_zombies_v10.raw_env(**environment_parameters)
 ```
